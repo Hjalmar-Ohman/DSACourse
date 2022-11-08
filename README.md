@@ -1,2 +1,2 @@
 # DSACourse
-Various assignments given for the course Data Structures and Algortithms
+Assignments are reused, so I won't copy paste all my solutions. Here is one modified version, just for an example
