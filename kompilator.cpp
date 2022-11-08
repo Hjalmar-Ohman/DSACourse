@@ -10,11 +10,10 @@ int main()
     unordered_map<string, string> new_map;
     scope.push(new_map);
 
-    string command;
-    string variable;
-    string type;
+
 
     for (int i = 0; i < N; ++i) {
+        string command;
         cin >> command;
         if (command == "{") {
             unordered_map<string, string> new_map;
@@ -26,6 +25,7 @@ int main()
             }
             scope.pop();
         } else if (command == "TYPEOF") {
+            string variable;
             cin >> variable;
             if (variables[variable].empty()) {
                 cout << "UNDECLARED"
@@ -34,6 +34,7 @@ int main()
                 cout << variables[variable].top() << "\n";
             }
         } else if (command == "DECLARE") {
+            string variable, type;
             cin >> variable;
             cin >> type;
             if (scope.top()[variable].empty()) {
